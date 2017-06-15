@@ -1,8 +1,12 @@
 FROM ubuntu:14.04
 RUN apt-get update
 RUN apt-get install -y dovecot-common dovecot-imapd openssl
+RUN mkdir /config
+RUN mkdir /users
 
 ADD dovecot /etc/dovecot
+ADD config /config
+ADD users /users
 
 RUN groupadd -g 5000 vmail && \
     useradd -g vmail -u 5000 vmail -d /home/vmail -m && \
