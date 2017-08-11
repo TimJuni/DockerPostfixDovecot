@@ -19,4 +19,7 @@ ADD start.sh /start.sh
 EXPOSE 143
 EXPOSE 993
 
+# Dovecot adm port
+EXPOSE 12345
+
 CMD sh start.sh
