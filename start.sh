@@ -15,6 +15,10 @@ mkdir /run/dovecot
 chmod -R +r /run/dovecot
 chmod -R +w /run/dovecot
 chmod -R 777 /home/vmail
+
+mkdir /data
+chmod -R 777 /data
+
 # start logger
 rsyslogd 
 
