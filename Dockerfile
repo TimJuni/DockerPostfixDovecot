@@ -1,6 +1,7 @@
-FROM ubuntu:14.04
+FROM ubuntu:16.04
 RUN apt-get update
-RUN apt-get install -y dovecot-common dovecot-imapd openssl
+RUN apt-get upgrade --fix-missing
+RUN apt-get install --no-install-recommends -y dovecot-common dovecot-imapd openssl --fix-missing
 RUN mkdir /config
 RUN mkdir /users
 
